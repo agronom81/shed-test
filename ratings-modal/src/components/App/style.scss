@@ -1,0 +1,75 @@
+@import "../../assets/styles/options";
+
+@font-face {
+    font-family: 'Larsseit';
+    src: url('../../assets/fonts/Larsseit.woff2') format('woff2'),
+        url('../../assets/fonts/Larsseit.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Larsseit';
+    src: url('../../assets/fonts/Larsseit-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/Larsseit-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: $main_font;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15), 0 14px 28px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: $btn_bgr;
+  padding-top: 16px;
+  padding-bottom: 23px;
+  width: 100%;
+  max-width: 260px;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: bold;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    transition: .123s all ease-in;
+    box-shadow: none;
+  }
+
+  &_fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .123s ease-in;
+}
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
+}
