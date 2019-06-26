@@ -1,9 +1,17 @@
 <template>
   <div id="app">
-    <button
-        class="btn btn_fixed"
-        @click="setShowModal"
-    >Rate Us</button>
+    <div class="position-center btn-width">
+      <button
+          class="btn"
+          @click="setShowModal"
+      >Rate Us</button>
+      <div 
+        class="result"
+        v-if="result"        
+      ><code><pre v-html="syntaxHighlight(result)"></pre></code></div>
+      
+    </div>
+    
     <transition name="component-fade" mode="out-in">
       <Modal v-if="showModal" />
     </transition>

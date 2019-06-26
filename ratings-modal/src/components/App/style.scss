@@ -53,14 +53,19 @@ body {
   &:hover {
     transition: .123s all ease-in;
     box-shadow: none;
-  }
+  }  
+}
 
-  &_fixed {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.btn-width {
+  width: 100%;
+  max-width: 260px;
+}
+
+.position-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text-center {
@@ -72,4 +77,41 @@ body {
 }
 .component-fade-enter, .component-fade-leave-to {
   opacity: 0;
+}
+
+pre {
+  outline: none; 
+  padding: 5px; 
+  margin: 5px auto;
+  display: table;
+}
+
+.string { 
+  color: green;
+  white-space: normal;
+}
+.number { 
+  color: darkorange;
+  
+  &::after {
+    content: '';
+    display: block;
+  }
+}
+
+.boolean { 
+  color: blue;
+}
+
+.null { 
+  color: magenta;
+}
+
+.key { 
+  color: red;
+
+  &::before {
+    content: '';
+    display: block;
+  }
 }

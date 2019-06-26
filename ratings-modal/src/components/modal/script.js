@@ -11,11 +11,11 @@ export default {
                     title: 'How would you rate your food?',
                     checked: 0
                 },
-                 {
+                {
                     title: 'How would you rate your delivery driver?',
                     checked: 0
                 },
-                 {
+                {
                     title: 'How would you rate your overall experience?',
                     checked: 0
                 }
@@ -30,11 +30,11 @@ export default {
         submit: function() {
             this.sendData = 'Send...';
             setTimeout(() => {
-                // console.log(JSON.stringify(this.starsContent));
+                this.$parent.result = JSON.stringify(this.starsContent);
                 this.sendData = 'Success!!!';
                 setTimeout(() => {
                     this.sendData = 'Submit feedback';
-                     this.$parent.showModal = false;
+                    this.$parent.showModal = false;
                 }, 1000);
             }, 2000);
         }
